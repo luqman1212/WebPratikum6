@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(72, 70, 72, 0.526); /* Overlay gelap untuk keterbacahan */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #433e3ec9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #878a8d;
+    text-align: center;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.nav ul li {
+    margin: 0 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #88929b;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Main Content */
+.main {
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.content {
+    flex: 3;
+}
+
+.post {
+    background-color: #523535cd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #151617;
+}
+
+p {
+    color: #f1d9d9;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #b1c7c9;
+    margin-bottom: 10px;
+}
+
+.excerpt {
+    font-size: 1rem;
+    color: #d5b9b9;
+    margin-bottom: 15px;
+}
+
+.spaced-text {
+    margin-bottom: 10px; /* Jarak di bawah elemen excerpt untuk Blog Post 2 */
+}
+
+.full-content p {
+    margin-bottom: 10px; /* Jarak antar kalimat dalam konten penuh */
+    color: #d5b9b9; /* Warna sama dengan excerpt untuk konsistensi */
+    font-size: 1rem; /* Ukuran font sama dengan excerpt */
+}
+
+.read-more {
+    background-color: #bb5e54;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #34120e;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+}
+
+.widget {
+    background-color: #523535cd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.widget h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #1f1d1d;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul li a {
+    text-decoration: none;
+    color: #bcacac;
+    transition: color 0.3s;
+}
+
+.widget ul li a:hover {
+    color: #e74c3c;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.search-bar button {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #937676;
+}
+
+/* Footer */
+.footer {
+    background-color: #5b3636;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}
